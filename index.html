@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TM Estética Automotiva | PPF, Ceramic Coating e Polimento em Florianópolis</title>
+  <meta name="description" content="Especialistas em PPF, Ceramic Coating, Polimento e Estética Automotiva em Florianópolis. +20 anos de experiência. Solicite seu orçamento!">
+  <meta property="og:title" content="TM Estética Automotiva | Proteção e Brilho para seu Veículo">
+  <meta property="og:description" content="PPF Full, Ceramic Coating, Polimento, Cristalização e mais. +20 anos protegendo veículos em Florianópolis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lp.tmesteticaautomotiva.com.br">
+  <link rel="canonical" href="https://lp.tmesteticaautomotiva.com.br">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#000000',
+              dark: '#0a0a0a',
+              gray: '#1a1a1a',
+              light: '#2a2a2a',
+              gold: '#c9a84c',
+              goldLight: '#e0c068',
+              white: '#ffffff',
+              muted: '#a0a0a0',
+            }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TM Estética Automotiva",
+    "description": "Especialistas em PPF, Ceramic Coating, Polimento e Estética Automotiva em Florianópolis.",
+    "url": "https://lp.tmesteticaautomotiva.com.br",
+    "telephone": "+5548996527898",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "R. Profa. Otília Cruz, 198 A",
+      "addressLocality": "Florianópolis",
+      "addressRegion": "SC",
+      "postalCode": "88095-080",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-27.5954",
+      "longitude": "-48.5480"
+    },
+    "sameAs": [
+      "https://www.instagram.com/tmesteticaautomotiva/",
+      "https://www.facebook.com/people/TM-Est%C3%A9tica-Automotiva/61557152052905/",
+      "https://www.youtube.com/@tmest%C3%A9ticaautomotiva"
+    ]
+  }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0a0a0a; }
+    ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 4px; }
+
+    /* Glassmorphism header */
+    .glass-header {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    /* Hero gradient overlay */
+    .hero-overlay {
+      background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.75) 100%);
+    }
+
+    /* Hero video */
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Gold gradient text */
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #c9a84c, #e0c068, #c9a84c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Card hover */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(201, 168, 76, 0.1);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(201, 168, 76, 0.4);
+      box-shadow: 0 20px 60px rgba(201, 168, 76, 0.1);
+    }
+
+    /* Counter animation */
+    .counter-section {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+      border-top: 1px solid rgba(201, 168, 76, 0.2);
+      border-bottom: 1px solid rgba(201, 168, 76, 0.2);
+    }
+
+    /* Video thumbnail hover */
+    .video-thumb {
+      transition: all 0.3s ease;
+    }
+    .video-thumb:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 40px rgba(201, 168, 76, 0.2);
+    }
+
+    /* Testimonial card */
+    .testimonial-card {
+      background: linear-gradient(145deg, #1a1a1a, #111111);
+      border: 1px solid rgba(201, 168, 76, 0.15);
+    }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      animation: pulse-whatsapp 2s infinite;
+    }
+    @keyframes pulse-whatsapp {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Section divider */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #c9a84c, #e0c068);
+      margin: 0 auto;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      transition: all 0.3s ease;
+    }
+  </style>
+</head>
+<body x-data="app()">
+
+  <!-- ==================== S1: HEADER ==================== -->
+  <header class="glass-header fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <img src="assets/images/Logo-tm.avif" alt="TM Estética Automotiva" class="h-12 w-auto">
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#servicos" class="text-brand-muted hover:text-brand-gold transition-colors text-sm font-medium tracking-wide uppercase">Serviços</a>
+          <a href="#sobre" class="text-brand-muted hover:text-brand-gold transition-colors text-sm font-medium tracking-wide uppercase">Sobre</a>
+          <a href="#depoimentos" class="text-brand-muted hover:text-brand-gold transition-colors text-sm font-medium tracking-wide uppercase">Depoimentos</a>
+          <a href="#contato" class="text-brand-muted hover:text-brand-gold transition-colors text-sm font-medium tracking-wide uppercase">Contato</a>
+          <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"
+             class="bg-brand-gold hover:bg-brand-goldLight text-black font-semibold px-6 py-2.5 rounded-full text-sm transition-all hover:shadow-lg hover:shadow-brand-gold/20">
+            Solicite um Orçamento
+          </a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button @click="mobileMenu = !mobileMenu" class="md:hidden text-white p-2">
+          <svg x-show="!mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg x-show="mobileMenu" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div x-show="mobileMenu" x-transition class="md:hidden pb-4 mobile-menu">
+        <div class="flex flex-col gap-3">
+          <a @click="mobileMenu = false" href="#servicos" class="text-brand-muted hover:text-brand-gold py-2 text-sm uppercase tracking-wide">Serviços</a>
+          <a @click="mobileMenu = false" href="#sobre" class="text-brand-muted hover:text-brand-gold py-2 text-sm uppercase tracking-wide">Sobre</a>
+          <a @click="mobileMenu = false" href="#depoimentos" class="text-brand-muted hover:text-brand-gold py-2 text-sm uppercase tracking-wide">Depoimentos</a>
+          <a @click="mobileMenu = false" href="#contato" class="text-brand-muted hover:text-brand-gold py-2 text-sm uppercase tracking-wide">Contato</a>
+          <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"
+             class="bg-brand-gold text-black font-semibold px-6 py-2.5 rounded-full text-sm text-center mt-2">
+            Solicite um Orçamento
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== S2: HERO ==================== -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background video -->
+    <div class="absolute inset-0 bg-brand-dark">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero.jpg">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero-overlay absolute inset-0"></div>
+
+    <!-- Decorative elements -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-0 w-72 h-72 bg-brand-gold/3 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-4 text-center pt-20">
+      <p class="text-brand-gold font-medium text-sm sm:text-base tracking-[0.3em] uppercase mb-6 fade-in">Estética Automotiva Premium</p>
+      <h1 class="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 fade-in">
+        Proteção e Brilho que seu
+        <span class="text-gradient-gold"> veículo merece</span>
+      </h1>
+      <p class="text-brand-muted text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-light leading-relaxed fade-in">
+        Especialistas em PPF, Ceramic Coating e Estética Automotiva em Florianópolis. Mais de 20 anos cuidando do seu veículo.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+        <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"
+           class="bg-brand-gold hover:bg-brand-goldLight text-black font-bold px-8 py-4 rounded-full text-base transition-all hover:shadow-lg hover:shadow-brand-gold/30 inline-flex items-center justify-center gap-2">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Fale Conosco no WhatsApp
+        </a>
+        <a href="#servicos"
+           class="border border-brand-gold/40 text-brand-gold hover:bg-brand-gold/10 font-semibold px-8 py-4 rounded-full text-base transition-all inline-flex items-center justify-center gap-2">
+          Conheça Nossos Serviços
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-brand-gold/50" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    </div>
+  </section>
+
+  <!-- ==================== S3: SERVICOS ==================== -->
+  <section id="servicos" class="py-20 sm:py-28 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">O que fazemos</p>
+        <h2 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-4">Conheça Nossos Serviços</h2>
+        <div class="section-divider mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- PPF Full -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/ppf.jpg" alt="PPF Full - Película de Proteção" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-5xl font-heading font-bold\'>PPF</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">PPF Full</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Proteja a pintura do seu carro contra riscos e impactos com nossa película de proteção de alta tecnologia.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20PPF%20Full.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Polimento -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/polimento.jpg" alt="Polimento Automotivo" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-4xl font-heading font-bold\'>Polimento</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">Polimento</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Revitalize a aparência do seu veículo com nossos polimentos especializados, removendo riscos e restaurando o brilho original da pintura.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Polimento.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cristalizacao -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/cristalizacao.jpg" alt="Cristalização Automotiva" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-3xl font-heading font-bold\'>Cristalização</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">Cristalização</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Aumente o brilho e a profundidade da pintura do seu veículo com o nosso processo de cristalização, garantindo um acabamento impecável.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Cristaliza%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Higienizacao -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/higienizacao.jpg" alt="Higienização Automotiva" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-3xl font-heading font-bold\'>Higienização</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">Higienização</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Proteja o interior do seu carro com nosso tratamento UV e mantenha o ambiente interno limpo e fresco com nossa higienização profissional.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Higieniza%C3%A7%C3%A3o.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Lavagem Premium -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/lavagem.jpg" alt="Lavagem Premium" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-3xl font-heading font-bold\'>Lavagem Premium</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">Lavagem Premium</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Oferecemos uma lavagem completa e detalhada, utilizando produtos de alta qualidade para garantir que seu carro esteja sempre impecável.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Lavagem%20Premium.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ceramic Coating -->
+        <div class="service-card rounded-2xl overflow-hidden bg-brand-gray fade-in">
+          <div class="h-52 bg-brand-light flex items-center justify-center overflow-hidden">
+            <img src="assets/images/ceramic.jpg" alt="Ceramic Coating" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex items-center justify-center h-full\'><span class=\'text-brand-gold text-3xl font-heading font-bold\'>Ceramic Coating</span></div>';">
+          </div>
+          <div class="p-6">
+            <h3 class="font-heading font-bold text-xl mb-3 text-white">Ceramic Coating</h3>
+            <p class="text-brand-muted text-sm leading-relaxed mb-5">Proporcione uma camada de proteção avançada com nosso revestimento cerâmico, que defende a pintura contra sujeira, manchas e danos ambientais.</p>
+            <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Ceramic%20Coating.%20Poderia%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener"
+               class="text-brand-gold hover:text-brand-goldLight text-sm font-semibold inline-flex items-center gap-2 transition-colors">
+              Saiba Mais
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== S4: NUMEROS ==================== -->
+  <section class="counter-section py-20 sm:py-24" x-data="counters()" x-intersect:enter.once="startCounters()">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-12 text-center">
+        <div class="fade-in">
+          <div class="text-5xl sm:text-6xl font-heading font-bold text-gradient-gold mb-2">
+            +<span x-text="count1">0</span>
+          </div>
+          <p class="text-brand-muted text-sm uppercase tracking-widest">Anos de Experiência</p>
+        </div>
+        <div class="fade-in">
+          <div class="text-5xl sm:text-6xl font-heading font-bold text-gradient-gold mb-2">
+            +<span x-text="count2">0</span>
+          </div>
+          <p class="text-brand-muted text-sm uppercase tracking-widest">Veículos Atendidos</p>
+        </div>
+        <div class="fade-in">
+          <div class="text-5xl sm:text-6xl font-heading font-bold text-gradient-gold mb-2">
+            +<span x-text="count3">0</span>
+          </div>
+          <p class="text-brand-muted text-sm uppercase tracking-widest">PPFs Instalados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== S5: VIDEOS ==================== -->
+  <section class="py-20 sm:py-28 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">Nosso Trabalho</p>
+        <h2 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-4">Veja Nossos Trabalhos</h2>
+        <div class="section-divider mt-6"></div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+        <a href="https://www.instagram.com/tmesteticaautomotiva/reel/DU_Saz3kZy2/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+
+        <a href="https://www.instagram.com/tmesteticaautomotiva/reel/DUg2HjiER0J/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+
+        <a href="https://www.instagram.com/tmesteticaautomotiva/reel/DUZQAZOka8m/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+
+        <a href="https://www.instagram.com/tmesteticaautomotiva/reel/DTWNBNeEUmw/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+
+        <a href="https://www.instagram.com/p/DSoABYskcnM/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+
+        <a href="https://www.instagram.com/p/DSVz-AAkZDa/" target="_blank" rel="noopener"
+           class="video-thumb relative rounded-xl overflow-hidden aspect-[9/16] bg-brand-gray group fade-in">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10"></div>
+          <div class="absolute inset-0 flex items-center justify-center z-20">
+            <div class="w-14 h-14 rounded-full bg-brand-gold/90 flex items-center justify-center group-hover:bg-brand-gold transition-colors">
+              <svg class="w-6 h-6 text-black ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="absolute bottom-4 left-4 right-4 z-20">
+            <p class="text-white text-sm font-medium">Trabalho Realizado</p>
+          </div>
+          <div class="w-full h-full bg-brand-light"></div>
+        </a>
+      </div>
+
+      <div class="text-center mt-10 fade-in">
+        <a href="https://www.instagram.com/tmesteticaautomotiva/" target="_blank" rel="noopener"
+           class="text-brand-gold hover:text-brand-goldLight font-semibold inline-flex items-center gap-2 transition-colors">
+          Ver mais no Instagram
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== S6: QUEM SOMOS ==================== -->
+  <section id="sobre" class="py-20 sm:py-28 bg-black">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Texto -->
+        <div class="fade-in">
+          <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">Nossa História</p>
+          <h2 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-6">Quem Somos</h2>
+          <div class="section-divider !mx-0 mb-8"></div>
+          <p class="text-brand-muted leading-relaxed mb-6">
+            Com mais de <strong class="text-white">20 anos de experiência</strong> no mercado de estética automotiva, a TM Estética Automotiva é referência em Florianópolis quando o assunto é proteção e cuidado com o seu veículo.
+          </p>
+          <p class="text-brand-muted leading-relaxed mb-6">
+            Liderada por Tito Matias, nossa equipe é especializada em <strong class="text-white">PPF Full, Ceramic Coating, Polimento, Cristalização</strong> e demais serviços de estética automotiva, sempre utilizando produtos de alta qualidade e as técnicas mais avançadas do mercado.
+          </p>
+          <p class="text-brand-muted leading-relaxed mb-8">
+            Nosso compromisso é entregar um resultado que supere suas expectativas, com atenção aos detalhes e total conhecimento técnico em cada processo.
+          </p>
+          <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conhecer%20melhor%20os%20servi%C3%A7os%20da%20TM." target="_blank" rel="noopener"
+             class="bg-brand-gold hover:bg-brand-goldLight text-black font-bold px-8 py-3.5 rounded-full text-sm transition-all hover:shadow-lg hover:shadow-brand-gold/20 inline-flex items-center gap-2">
+            Converse com a gente
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+
+        <!-- Imagem placeholder -->
+        <div class="fade-in">
+          <div class="rounded-2xl overflow-hidden border border-brand-gold/10 aspect-[4/3] bg-brand-gray flex items-center justify-center">
+            <img src="assets/images/quem-somos.jpg" alt="TM Estética Automotiva - Espaço" class="w-full h-full object-cover" loading="lazy"
+                 onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full p-8 text-center\'><span class=\'text-gradient-gold text-6xl font-heading font-bold mb-4\'>TM</span><span class=\'text-brand-muted text-sm\'>Estética Automotiva</span></div>';">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== S7: DEPOIMENTOS ==================== -->
+  <section id="depoimentos" class="py-20 sm:py-28 bg-brand-dark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16 fade-in">
+        <p class="text-brand-gold text-sm tracking-[0.3em] uppercase mb-3">Avaliações reais</p>
+        <h2 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl mb-4">O que nossos clientes dizem</h2>
+        <div class="section-divider mt-6"></div>
+      </div>
+
+      <div x-data="{ active: 0 }" class="max-w-4xl mx-auto">
+        <!-- Testimonials -->
+        <div class="relative min-h-[280px] sm:min-h-[220px]">
+
+          <!-- Depoimento 1 -->
+          <div x-show="active === 0" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0"
+               class="testimonial-card rounded-2xl p-8 sm:p-10">
+            <div class="flex items-center gap-1 mb-4">
+              <template x-for="i in 5"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></template>
+            </div>
+            <p class="text-white/90 leading-relaxed mb-6 italic">"Quero deixar registrado o excelente atendimento que recebi na TM Estética Automotiva. O profissionalismo, atenção aos detalhes e qualidade do serviço são impressionantes. Meu carro ficou impecável, muito acima das expectativas! A equipe é extremamente atenciosa e demonstra um grande cuidado em tudo o que faz. Recomendo de olhos fechados e, com certeza, voltarei mais vezes. Parabéns pelo trabalho!"</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center"><span class="text-brand-gold font-bold text-sm">FD</span></div>
+              <div>
+                <p class="text-white font-semibold text-sm">Fabio Duncan</p>
+                <p class="text-brand-muted text-xs">21 de janeiro de 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 2 -->
+          <div x-show="active === 1" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0"
+               class="testimonial-card rounded-2xl p-8 sm:p-10">
+            <div class="flex items-center gap-1 mb-4">
+              <template x-for="i in 5"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></template>
+            </div>
+            <p class="text-white/90 leading-relaxed mb-6 italic">"Serviço e atendimento de alta qualidade e profissionalismo. Contratei um serviço para proteção preventiva das partes plásticas externas do carro, pois o carro fica muito tempo exposto ao sol. Na contratação foi explicado de forma clara as opções existentes e os benefícios de cada uma, assim como os diferentes produtos existentes para essa finalidade e a importância da escolha para a conservação da estética do veículo a longo prazo. Resultado excelente."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center"><span class="text-brand-gold font-bold text-sm">AB</span></div>
+              <div>
+                <p class="text-white font-semibold text-sm">Artur Brandes de Azevedo Ferreira</p>
+                <p class="text-brand-muted text-xs">22 de janeiro de 2025</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Depoimento 3 -->
+          <div x-show="active === 2" x-transition:enter="transition ease-out duration-500" x-transition:enter-start="opacity-0 transform translate-y-4" x-transition:enter-end="opacity-100 transform translate-y-0"
+               class="testimonial-card rounded-2xl p-8 sm:p-10">
+            <div class="flex items-center gap-1 mb-4">
+              <template x-for="i in 5"><svg class="w-5 h-5 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg></template>
+            </div>
+            <p class="text-white/90 leading-relaxed mb-6 italic">"Pra mim foi uma experiência incrível... vários serviços executados no meu carro que eu nem sabia que era possível e eles deixaram simplesmente impecável. E deu pra perceber que o Tito tem total conhecimento técnico de todos os processos. Indico demais a TM."</p>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-brand-gold/20 flex items-center justify-center"><span class="text-brand-gold font-bold text-sm">TS</span></div>
+              <div>
+                <p class="text-white font-semibold text-sm">Thiago Silva</p>
+                <p class="text-brand-muted text-xs">21 de janeiro de 2025</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dots navigation -->
+        <div class="flex justify-center gap-3 mt-8">
+          <template x-for="(_, i) in 3">
+            <button @click="active = i" :class="active === i ? 'bg-brand-gold w-8' : 'bg-brand-light w-3 hover:bg-brand-gold/40'" class="h-3 rounded-full transition-all duration-300"></button>
+          </template>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== S8: FOOTER ==================== -->
+  <footer id="contato" class="bg-black border-t border-brand-gold/10 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
+        <!-- Logo + Sobre -->
+        <div>
+          <img src="assets/images/Logo-tm.avif" alt="TM Estética Automotiva" class="h-12 w-auto">
+          <p class="text-brand-muted text-sm mt-4 leading-relaxed">
+            Especialistas em proteção e estética automotiva em Florianópolis. Mais de 20 anos cuidando do seu veículo com excelência.
+          </p>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Contato</h4>
+          <div class="space-y-3">
+            <a href="https://wa.me/5548996527898" target="_blank" rel="noopener" class="flex items-start gap-3 text-brand-muted hover:text-brand-gold text-sm transition-colors">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              (48) 99652-7898
+            </a>
+            <a href="https://maps.google.com/?q=R.+Profa.+Ot%C3%ADlia+Cruz,+198+A+-+Jardim+Atl%C3%A2ntico,+Florian%C3%B3polis+-+SC" target="_blank" rel="noopener" class="flex items-start gap-3 text-brand-muted hover:text-brand-gold text-sm transition-colors">
+              <svg class="w-4 h-4 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              R. Profa. Otília Cruz, 198 A<br>Jardim Atlântico, Florianópolis - SC<br>88095-080
+            </a>
+          </div>
+        </div>
+
+        <!-- Redes Sociais -->
+        <div>
+          <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4">Redes Sociais</h4>
+          <div class="flex gap-4">
+            <a href="https://www.instagram.com/tmesteticaautomotiva/" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:text-brand-gold hover:border-brand-gold/60 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="https://www.facebook.com/people/TM-Est%C3%A9tica-Automotiva/61557152052905/" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:text-brand-gold hover:border-brand-gold/60 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@tmest%C3%A9ticaautomotiva" target="_blank" rel="noopener"
+               class="w-10 h-10 rounded-full border border-brand-gold/20 flex items-center justify-center text-brand-muted hover:text-brand-gold hover:border-brand-gold/60 transition-all">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+
+          <!-- Google Maps -->
+          <div class="mt-6">
+            <a href="https://maps.google.com/?q=R.+Profa.+Ot%C3%ADlia+Cruz,+198+A+-+Jardim+Atl%C3%A2ntico,+Florian%C3%B3polis+-+SC" target="_blank" rel="noopener"
+               class="flex items-center gap-2 text-brand-muted hover:text-brand-gold text-sm transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              Ver no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="border-t border-brand-gold/10 pt-8 text-center">
+        <p class="text-brand-muted text-xs">&copy; 2026 TM Estética Automotiva. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== WHATSAPP FLOATING BUTTON ==================== -->
+  <a href="https://wa.me/5548996527898?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener"
+     class="whatsapp-float fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] transition-colors">
+    <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // App state
+    function app() {
+      return {
+        mobileMenu: false,
+      }
+    }
+
+    // Counter animation
+    function counters() {
+      return {
+        count1: 0,
+        count2: 0,
+        count3: 0,
+        startCounters() {
+          this.animateCounter('count1', 20, 2000);
+          this.animateCounter('count2', 500, 2500);
+          this.animateCounter('count3', 200, 2200);
+        },
+        animateCounter(prop, target, duration) {
+          const start = performance.now();
+          const step = (now) => {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            // Ease out cubic
+            const eased = 1 - Math.pow(1 - progress, 3);
+            this[prop] = Math.floor(eased * target);
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        }
+      }
+    }
+
+    // Fade-in on scroll (Intersection Observer)
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    });
+
+    // Smooth scroll for anchor links
+    document.addEventListener('click', (e) => {
+      const link = e.target.closest('a[href^="#"]');
+      if (link) {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
